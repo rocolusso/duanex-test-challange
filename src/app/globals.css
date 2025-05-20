@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.icon-js::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('./../../public/assets/icons/js-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Optional: adjust vertical alignment */
+  vertical-align: middle;
+}
+
+.icon-css::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('./../../public/assets/icons/css-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Optional: adjust vertical alignment */
+  vertical-align: middle;
+}
