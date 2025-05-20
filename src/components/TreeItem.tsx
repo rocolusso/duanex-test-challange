@@ -46,7 +46,7 @@ function TreeItem({ item }: { item: DbApiItem }) {
       {item.name}
       {item.subitems && item.subitems?.length > 0 && (
         <ul className="ml-5 inside">
-          {item.subitems.map((subitem: any) => (
+          {item.subitems.map((subitem: DbApiItem) => (
             <TreeItem key={Math.random()} item={subitem} />
           ))}
         </ul>
