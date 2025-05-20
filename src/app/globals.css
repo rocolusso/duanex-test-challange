@@ -1,21 +1,17 @@
 @import "tailwindcss";
 
-
-
 body {
   background: black;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
 .icon-js::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-image: url('./../../public/assets/icons/js-icon.svg');
+  background-image: url("./../../public/assets/icons/js-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,11 +20,11 @@ body {
 }
 
 .icon-css::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-image: url('./../../public/assets/icons/css-icon.svg');
+  background-image: url("./../../public/assets/icons/css-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
