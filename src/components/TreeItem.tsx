@@ -28,18 +28,17 @@ function TreeItem({ item }: { item: DbApiItem }) {
   const handleClick = (e: React.BaseSyntheticEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    const elem = e.target;
+    const elem = e.currentTarget;
 
-    if (
-      (elem.innerHTML.includes('.js') || elem.innerHTML.includes('.css'))
-      && elem.nodeName === 'LI'
-      && elem.childNodes.length < 2
-    ) {
-      router.push(`/${elem.innerText}`);
+    const name = elem.getAttribute('data-name') || '';
+
+    if (['.js', '.css'].some((ext) => name.endsWith(ext))) {
+      router.push(`/${name}`);
     }
   };
   return (
     <li
+      data-name={item.name}
       onClick={handleClick}
       className={`${iconClass} border-b border-t border-gray-200 cursor-pointer`}
     >
